@@ -5,13 +5,17 @@
   "main": "index.js",
   "scripts": {
     "test": "jest --verbose --coverage",
-    "lint": "eslint '**/*.js'"
+    "test-watch": "jest --watchAll --verbose --coverage",
+    "lint": "eslint '**/*.js'",
+    "start": "node index.js",
+    "jsdoc": "./node_modules/.bin/jsdoc -c ./docs/config/jsdoc.config.json"
   },
-  "author": "",
+  "author": "Angela Vawser",
   "license": "ISC",
   "dependencies": {
     "eslint": "^6.1.0",
     "eslint-plugin-react": "^7.14.3",
-    "jest": "^24.8.0"
+    "jest": "^24.8.0",
+    "jsdoc": "^3.6.3"
   }
 }
