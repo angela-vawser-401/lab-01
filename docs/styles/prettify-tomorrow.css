@@ -66,35 +66,35 @@
 /* Use higher contrast and text-weight for printable form. */
 @media print, projection {
 .str {
-    color: #060; }
+  color: #060; }
 
 .kwd {
-    color: #006;
-    font-weight: bold; }
+	color: #006;
+	font-weight: bold; }
 
 .com {
-    color: #600;
-    font-style: italic; }
+	color: #600;
+	font-style: italic; }
 
 .typ {
-    color: #404;
-    font-weight: bold; }
+	color: #404;
+	font-weight: bold; }
 
 .lit {
-    color: #044; }
+  color: #044; }
 
 .pun, .opn, .clo {
-    color: #440; }
+  color: #440; }
 
 .tag {
-    color: #006;
-    font-weight: bold; }
+	color: #006;
+	font-weight: bold; }
 
 .atn {
-    color: #404; }
+  color: #404; }
 
 .atv {
-    color: #060; } }
+  color: #060; } }
 /* Style */
 /*
 pre.prettyprint {
@@ -108,5 +108,6 @@ pre.prettyprint {
 
 /* Specify class=linenums on a pre to get line numbering */
 ol.linenums {
-    margin-top: 0;
-    margin-bottom: 0; }
+	margin-top: 0;
+	margin-bottom: 0; }
+
