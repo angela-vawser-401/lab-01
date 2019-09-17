@@ -7,7 +7,6 @@
 ### Links and Resources
 * [submission PR](https://github.com/angela-vawser-401/lab-01/pull/1)
 * [travis](https://travis-ci.com/angela-vawser-401/lab-01)
-* [front-end](https://amvawser-lab01.herokuapp.com/)
 
 #### Documentation
 * [jsdoc](https://amvawser-lab01.herokuapp.com/docs)
