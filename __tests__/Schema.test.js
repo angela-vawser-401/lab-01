@@ -13,7 +13,7 @@ describe('Schema', () => {
   });
 
   it('booleans', () => {
-    expect(validator.getCastor('boolean')).toBe(validator.toBoolean);
+    expect(validator.getCaster('boolean')).toBe(validator.toBoolean);
   });
 
   it('date', () => {
