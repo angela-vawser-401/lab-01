@@ -1,4 +1,5 @@
 const validator = require('../lib/validator.js');
+const CastError = require('../lib/Errors.js');
 
 describe('validator module', () => {
   
@@ -157,4 +158,68 @@ describe('validator module', () => {
     });
 
   });
+
+});
+
+describe('caster module', () => {
+  
+  const string = 'yes';
+  const number = 1;
+  const boolean = false;
+  const date = new Date();
+
+  describe('performs basic validation of', () => {
+
+    it('strings', () => {
+      expect(validator.toString(string)).toBe(String);
+      expect(validator.toNumber(number)).toBe(Number);
+      expect(validator.toBoolean(boolean)).toBe(Boolean);
+      expect(validator.toDate(date)).toBe(Date);
+    });
+
+    it('numbers', () => {
+      expect(validator.toString(string)).toBe(String);
+      expect(validator.toNumber(number)).toBe(Number);
+      expect(validator.toBoolean(boolean)).toBe(Boolean);
+      expect(validator.toDate(date)).toBe(Date);
+    });
+
+    it('booleans', () => {
+      expect(validator.toString(string)).toBe(String);
+      expect(validator.toNumber(number)).toBe(Number);
+      expect(validator.toBoolean(boolean)).toBe(Boolean);
+      expect(validator.toDate(date)).toBe(Date);
+
+    });
+
+    it('dates', () => {
+      expect(validator.toString(string)).toBe(CastError);
+      expect(validator.toNumber(number)).toBe(CastError);
+      expect(validator.toBoolean(boolean)).toBe(CastError);
+      expect(validator.toDate(date)).toBe(CastError);
+
+    });
+
+  });
+
+  describe('get Caster for', () => {
+
+    it('strings', () => {
+      expect(validator.getCaster('string')).toBe(validator.toString);
+    });
+    
+    it('numbers', () => {
+      expect(validator.getCaster('number')).toBe(validator.toNumber);
+    });
+
+    it('booleans', () => {
+      expect(validator.getCaster('boolean')).toBe(validator.toBoolean);
+    });
+
+    it('date', () => {
+      expect(validator.getCaster('date')).toBe(validator.toDate);
+    });
+
+  });
+
 });
