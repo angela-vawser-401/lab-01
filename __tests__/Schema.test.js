@@ -1,4 +1,5 @@
 const Schema = require('../lib/Schema');
+const { ModelError } = require('../lib/Errors');
 
 describe('Schema', () => {
   const personSchema = {
@@ -42,11 +43,25 @@ describe('Schema', () => {
     'married': 'true',
     'kids': '0',
   };
+
+  const invalidModel = {
+    
+    'firstName': [],
+    'lastName': 'Vawser',
+    'married': 'true',
+    'kids': '0',
+  };
   
   // add a test schema
 
   it('validates model', () => {
     expect(newSchema.validate(newDataSample)).toEqual(newDataSample);
     expect(newSchema.validate(needsCoersionSample)).toEqual(newDataSample);
+  });
+
+  it('invalid model', () => {
+    expect( () => {
+      newSchema.validate(invalidModel)
+    }).toThrow(ModelError);
   });
 });
