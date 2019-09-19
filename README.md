@@ -1,11 +1,11 @@
-# LAB - 01
+# LAB - 02
 
-## Validator
+## Node Ecosystem
 
 ### Author: Angela Vawser
 
 ### Links and Resources
-* [submission PR](https://github.com/angela-vawser-401/lab-01/pull/1)
+* [submission PR](https://github.com/angela-vawser-401/lab-01/pull/2)
 * [travis](https://travis-ci.com/angela-vawser-401/lab-01)
 
 #### Documentation
