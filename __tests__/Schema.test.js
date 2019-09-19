@@ -13,7 +13,7 @@ describe('Schema', () => {
       type: 'string',
       required: true,
     },
-      
+
     married: {
       type: 'boolean',
       required: true,
@@ -29,7 +29,7 @@ describe('Schema', () => {
   const newSchema = new Schema(personSchema);
 
   const newDataSample = {
-    
+
     'firstName': 'Angela',
     'lastName': 'Vawser',
     'married': true,
@@ -37,7 +37,7 @@ describe('Schema', () => {
   };
 
   const needsCoersionSample = {
-    
+
     'firstName': 'Angela',
     'lastName': 'Vawser',
     'married': 'true',
@@ -45,13 +45,13 @@ describe('Schema', () => {
   };
 
   const invalidModel = {
-    
+
     'firstName': [],
     'lastName': 'Vawser',
     'married': 'true',
     'kids': '0',
   };
-  
+
   // add a test schema
 
   it('validates model', () => {
@@ -60,8 +60,8 @@ describe('Schema', () => {
   });
 
   it('invalid model', () => {
-    expect( () => {
-      newSchema.validate(invalidModel)
+    expect(() => {
+      newSchema.validate(invalidModel);
     }).toThrow(ModelError);
   });
 });
